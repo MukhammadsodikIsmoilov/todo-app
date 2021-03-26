@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  height: 100vh;
+  background-image: linear-gradient(130deg, #ffffff, #1c3f80);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  color: #595959;
+}
+
+.main {
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+}
+
+input[type="text"] {
+  height: 30px;
+  outline: 0;
+  border: none;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  color: #595959;
+  flex-grow: 1;
+}
+
+button {
+  font-size: 1.5rem;
+  background-color: #ffffff;
+  outline: 0;
+  border: none;
+  color: #595959;
+}
+
+.todoList {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 0;
+  font-size: 1rem;
+  color: #595959;
+}
+
+i {
+  cursor: pointer;
+}
+
+.todo-item {
+  flex-grow: 1;
+}
+
+.btn {
+  color: lightcoral;
+  padding: 7px 10px;
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: inherit;
+  }
+}
