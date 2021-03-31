@@ -1,10 +1,11 @@
 import * as actionTypes from './types';
 
 
-export const showAlert = message => {
+export const showAlert = (message, status) => {
   return {
     type: actionTypes.SHOW_ALERT,
     message,
+    status
   };
 };
 
