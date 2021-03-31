@@ -1,10 +1,10 @@
 import React from 'react'
 import {useSelector} from 'react-redux';
-import Todo from './Todo';
+import Todo from './todo';
 
 
 const TodoList = () => {
-  const todos = useSelector(state => state.todos.todos)
+  const todos = useSelector(state => state.todoReducer.todos)
   return(
     <ul>
       {todos.map(todo => (

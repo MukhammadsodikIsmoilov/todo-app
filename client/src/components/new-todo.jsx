@@ -1,22 +1,25 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux'
-import {addTodo} from '../redux/todo/actions';
-import {showAlert, hideAlert} from '../redux/alert/actions'
+import {addTodo, fetchTodos} from '../redux/todo/actions';
+import {showAlert} from '../redux/alert/actions'
 
 
 const NewTodo = () => {
   const dispatch = useDispatch()
   const [todo, setTodo] = useState('');
+
+  useEffect(() => {
+    dispatch(fetchTodos())
+  }, [dispatch])
+
   const handleSubmit = e => {
     e.preventDefault();
     if (todo.length > 2) {
       dispatch(addTodo(todo));
+      dispatch(fetchTodos())
       setTodo('');
     } else {
-      dispatch(showAlert('Type at least 3 characters'));
-      setTimeout(function () {
-        dispatch(hideAlert());
-      }, 3000);
+      dispatch(showAlert('Type at least 3 characters', 'info'));
     }
   };
   return (

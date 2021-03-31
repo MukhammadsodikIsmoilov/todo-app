@@ -1,49 +1,49 @@
-import * as actionTypes from './types';
+import * as actionTypes from "./types";
 
 const initialState = {
-  todos: [
-    {id: 1, task: 'Make a cake', completed: true},
-    {id: 2, task: 'Set a plan', completed: false},
-    {id: 3, task: 'Try to dream big', completed: false},
-  ],
+  todos: [],
+  currentTodo: null,
 };
 
 export const todos = (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.FETCH_TODOS_SUCCESS:
+    case actionTypes.SHOW_ACTIVE_SUCCESS:
+    case actionTypes.SHOW_COMPLETED_SUCCESS:
+      return {
+        ...state,
+        todos: action.todos,
+      };
     case actionTypes.ADD_TODO:
       return {
         ...state,
-        todos: [
-          ...state.todos,
-          {
-            id: state.todos.length + 1,
-            task: action.todo,
-            completed: false,
-          },
-        ],
+        currentTodo: action.todo,
+      };
+    case actionTypes.ADD_TODO_SUCCESS:
+      return {
+        ...state,
+        todos: [...state.todos, action.todo],
+        currentTodo: null,
+      };
+    case actionTypes.UPDATE_TODO:
+      return {
+        ...state,
+        currentTodo: action.todo,
+      };
+    case actionTypes.UPDATE_TODO_SUCCESS:
+      return {
+        ...state,
+        todos: state.todos.map((todo) => {
+          if (todo.id === action.todo.id) todo = action.todo;
+
+          return todo;
+        }),
+        currentTodo: null,
       };
     case actionTypes.DELETE_TODO:
       return {
         ...state,
-        todos: state.todos.filter(todo => todo.id !== action.id),
-      };
-    case actionTypes.CLEAR_TODOS:
-      return {
-        ...state,
-        todos: [],
-      };
-    case actionTypes.IS_COMPLETED:
-      return {
-        ...state,
-        todos: state.todos.map(todo => {
-          if (todo.id === action.id) {
-            todo = {
-              ...todo,
-              completed: !todo.completed,
-            };
-          }
-          return todo;
-        }),
+        currentTodo: action.todo,
       };
     default:
       return state;

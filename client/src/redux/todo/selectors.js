@@ -1,0 +1,1 @@
+export const getCurrentTodo = state => state.todoReducer.currentTodo
