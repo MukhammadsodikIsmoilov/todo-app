@@ -15,6 +15,8 @@ export const todos = (state = initialState, action) => {
         todos: action.todos,
       };
     case actionTypes.ADD_TODO:
+    case actionTypes.UPDATE_TODO:
+    case actionTypes.DELETE_TODO:
       return {
         ...state,
         currentTodo: action.todo,
@@ -25,11 +27,6 @@ export const todos = (state = initialState, action) => {
         todos: [...state.todos, action.todo],
         currentTodo: null,
       };
-    case actionTypes.UPDATE_TODO:
-      return {
-        ...state,
-        currentTodo: action.todo,
-      };
     case actionTypes.UPDATE_TODO_SUCCESS:
       return {
         ...state,
@@ -39,11 +36,6 @@ export const todos = (state = initialState, action) => {
           return todo;
         }),
         currentTodo: null,
-      };
-    case actionTypes.DELETE_TODO:
-      return {
-        ...state,
-        currentTodo: action.todo,
       };
     default:
       return state;

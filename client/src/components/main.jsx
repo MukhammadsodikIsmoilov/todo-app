@@ -1,15 +1,20 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { clearTodos, fetchTodos, showActive, showCompleted } from "../redux/todo/actions";
+import {
+  clearTodos,
+  fetchTodos,
+  showActive,
+  showCompleted,
+} from "../redux/todo/actions";
 import TodoList from "./todos";
 
 const Body = () => {
   const dispatch = useDispatch();
 
   const clearAll = () => {
-    dispatch(clearTodos())
-    dispatch(fetchTodos())
-  }
+    dispatch(clearTodos());
+    dispatch(fetchTodos());
+  };
 
   return (
     <div className="todoList">
