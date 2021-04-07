@@ -22,7 +22,7 @@
 
     
     <a href="https://github.com/MukhammadsodikIsmoilov/todo-app">
-        <img src="https://github.com/MukhammadsodikIsmoilov/todo-app/blob/master/client/public/assets/todo-app.PNG" alt="todo-app" width="400" height="300">
+        <img src="https://flic.kr/p/2kREsme" alt="todo-app" width="400" height="300">
     </a>
 </div>
 
@@ -40,6 +40,5 @@
 [stars-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
 [issues-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/issues
-[linkedin-shield]: https://img.shields.io/twitter/url?style=social
-[linkedin-url]: https://twitter.com/curious_333
-[product-screenshot]: images/screenshot.png
+[twitter-shield]: https://img.shields.io/twitter/url?style=social
+[twitter-url]: https://twitter.com/curious_333
