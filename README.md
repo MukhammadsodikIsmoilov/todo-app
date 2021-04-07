@@ -28,14 +28,14 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/MukhammadsodikIsmoilov/todo-app
 [contributors-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/MukhammadsodikIsmoilov/todo-app
 [forks-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/network/members
-[stars-shield]: https://img.shields.io/github/stars/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/MukhammadsodikIsmoilov/todo-app
 [stars-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/MukhammadsodikIsmoilov/todo-app
 [issues-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/issues
-[twitter-shield]: https://img.shields.io/twitter/url?label=Tweeter&logo=twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fcurious_333
+[twitter-shield]: https://img.shields.io/twitter/follow/curious_333?logoColor=blue&style=social
 [twitter-url]: https://twitter.com/curious_333
 
