@@ -9,7 +9,9 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+[![Watchers][watchers-shield][watchers-url]]
 [![Issues][issues-shield]][issues-url]
+[![Last-Commit][last-commit-shield][last-commit-url]]
 [![Twitter][twitter-shield]][twitter-url]
 
 
@@ -18,11 +20,11 @@
 
 <!-- Project Overview -->
 <div >
-    <h3 align="center">Best-README-Template</h3>
+    <h3 align="center">Todo App - Django, React</h3>
 
     
     <a href="https://github.com/MukhammadsodikIsmoilov/todo-app">
-        <img src="https://flic.kr/p/2kREsme" alt="todo-app" width="400" height="300">
+        <img src="https://user-images.githubusercontent.com/71032772/113895611-926dbb00-97e2-11eb-8852-5e229bc30b6b.png" alt="todo-app" width="400" height="300">
     </a>
 </div>
 
@@ -32,13 +34,18 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
 [contributors-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
 [forks-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
 [stars-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[watchers-shield]: https://img.shields.io/github/watchers/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[watchers-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/watchers
+[issues-shield]: https://img.shields.io/github/issues/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
 [issues-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/issues
-[twitter-shield]: https://img.shields.io/twitter/url?style=social
+[last-commit-shield]: https://img.shields.io/github/last-commit/MukhammadsodikIsmoilov/todo-app?style=for-the-badge
+[last-commit-url]: https://github.com/MukhammadsodikIsmoilov/todo-app/commit/master
+[twitter-shield]: https://img.shields.io/twitter/url?label=Tweeter&logo=twitter&style=social&url=https%3A%2F%2Ftwitter.com%2Fcurious_333
 [twitter-url]: https://twitter.com/curious_333
+
