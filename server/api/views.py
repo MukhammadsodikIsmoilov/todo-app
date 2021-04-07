@@ -1,23 +1,25 @@
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.views import APIView
+from rest_framework.reverse import reverse
 from .models import Todo
 from .serializers import TodoSerializer
 
 
-@api_view(['GET'])
-def APIOverview(request):
-    api_urls = {
-        'todos': 'api/todos/',
-        'completed todos': 'api/todos&is_completed=True',
-        'active todos': 'api/todos&active=True',
-        'todo': 'api/todos/<todo_id>',
-        'update todo': 'api/todos/<todo_id>/update/',
-        'delete todo': 'api/todos/<todo_id>/delete/',
-        'delete all todos': 'api/todos/delete',
-        'create todo': 'api/todos/create/'
-    }
-    return Response(api_urls)
+class TodoAPIRoot(APIView):
+    def get(self, request, format=None):
+        api_urls = {
+            'todos': reverse('todo:todos', request=request, format=format),
+            'completed todos': reverse('todo:completed-todos', request=request, format=format),
+            'active todos': reverse('todo:active-todos', request=request, format=format),
+            'delete all todos': reverse('todo:delete-todos', request=request, format=format),
+            'create todo': reverse('todo:create-todo', request=request, format=format),
+            'todo': 'api/todos/<todo_id>',
+            'update todo': 'api/todos/<todo_id>/update/',
+            'delete todo': 'api/todos/<todo_id>/delete/',
+        }
+        return Response(api_urls)
 
 
 class TodoListView(generics.ListAPIView):
@@ -48,7 +50,7 @@ class CompletedTodosView(generics.ListAPIView):
         serializer = self.get_serializer(todos, many=True)
         return Response(serializer.data, status=200)
 
-    
+
 class ActiveTodosView(generics.ListAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
@@ -71,7 +73,7 @@ class CreateTodoView(generics.CreateAPIView):
 
         if self.check_validation(self.request.data):
             self.perform_create(serializer)
-            response={
+            response = {
                 "todo": serializer.data,
                 "message": "Task created successfully"
             }
@@ -96,14 +98,14 @@ class UpdateTodoView(generics.UpdateAPIView):
 
         if self.check_validation(self.request.data):
             serializer.save()
-            response={
+            response = {
                 "todo": serializer.data,
                 "message": "Task updated successfully"
             }
             return Response(data=response, status=200)
 
         return Response(data={"error": "Oops, something went wrong. Check your request data"}, status=400)
-    
+
     @staticmethod
     def check_validation(data):
         return len(data['title']) > 3
@@ -119,9 +121,8 @@ class DeleteTodoView(generics.DestroyAPIView):
             todo = self.get_object()
             todo.delete()
             return Response(data={"message": "Task deleted successfully"}, status=200)
-        except:
+        finally:
             return Response(data={"error": "Oops, something went wrong. Check your request data"}, status=400)
-
 
 
 @api_view(['DELETE'])
@@ -130,5 +131,5 @@ def deleteAllTasksView(request):
         todos = Todo.objects.all()
         todos.delete()
         return Response(data={"message": "All tasks have been deleted successfully"}, status=200)
-    except:
+    finally:
         return Response(data={"error": "Oops, something went wrong. Check your request data"}, status=400)
