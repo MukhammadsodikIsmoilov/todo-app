@@ -76,6 +76,10 @@ li {
   color: #595959;
 }
 
+.task-counter{
+  font-size: 14px;
+}
+
 .edit-box{
   width: 100%;
   display: flex;
