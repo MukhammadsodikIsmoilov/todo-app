@@ -17,7 +17,7 @@
 
 
 <!-- Project Overview -->
-<h2 align="center">Todo App - Django, React</h2>
+<h2 align="center">Todo App</h2>
 <br />
 
 ![Todo App](https://user-images.githubusercontent.com/71032772/113895611-926dbb00-97e2-11eb-8852-5e229bc30b6b.png)
