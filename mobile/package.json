@@ -1,20 +1,23 @@
 {
-  "name": "todoApp",
+  "name": "todo",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android:dev": "react-native run-android",
+    "ios:dev": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "6.5.1",
+    "@fortawesome/react-native-fontawesome": "0.3.0",
     "dayjs": "1.11.10",
     "mobx": "6.12.0",
     "react": "18.2.0",
     "react-hook-form": "7.51.0",
-    "react-native": "0.73.6"
+    "react-native": "0.73.6",
+    "react-native-svg": "15.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
