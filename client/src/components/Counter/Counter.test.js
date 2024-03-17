@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 
 import TaskCounter from "./Counter";
 
-describe("<Counter />", () => {
+describe("Counter", () => {
 	it("should render the correct amount of incomplete tasks", () => {
 		const tasksAmount = 5;
 		const { getByText } = render(<TaskCounter tasksLeft={tasksAmount} />);

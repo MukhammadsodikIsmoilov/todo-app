@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Header from "./Header.jsx";
 
-describe("Header component", () => {
+describe("COMPONENT: Header ", () => {
 	// getByText
 	it("should match given title props", () => {
 		render(<Header title='header' />);
@@ -15,6 +15,13 @@ describe("Header component", () => {
 		render(<Header title='header' />);
 		const headingElement = screen.getByRole("heading", { name: "header" });
 		expect(headingElement).toBeDefined();
+	});
+
+	// getByTitle
+	it("should render the same text passed into title ", () => {
+		render(<Header title='header' />);
+		const headingElement = screen.getByTitle("header");
+		expect(headingElement).toBeInTheDocument();
 	});
 
 	// queryBy

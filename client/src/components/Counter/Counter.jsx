@@ -3,7 +3,7 @@ import React from "react";
 function TaskCounter({ tasksLeft }) {
 	if (tasksLeft > 0)
 		return (
-			<div className='task-counter' data-testId="counter">
+			<div className='task-counter' data-testid="counter">
 				{tasksLeft} {tasksLeft > 1 ? "tasks" : "task"} left
 			</div>
 		);

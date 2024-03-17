@@ -26,7 +26,7 @@ const NewTodo = () => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="New Todo ..."
+        placeholder="New Todo..."
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
       />
